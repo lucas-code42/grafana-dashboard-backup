@@ -50,5 +50,5 @@ def backup() -> bool:
 if __name__ == "__main__":
     if not backup():
         print("Backup não foi realizado, verifique permisssões/acessos")
-        exit(0)
+        exit(1)
     print("Backup realizado com sucesso")
