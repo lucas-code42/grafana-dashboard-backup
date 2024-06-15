@@ -1,2 +1,2 @@
 # grafana-dashboard-backup
-Backup all dashboards found in grafana.
+Backup dashboards based on specific folders or just backup all of them
