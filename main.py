@@ -25,7 +25,7 @@ def get_dashboard(dashboard: dict):
     if response.status_code != 200:
         print(
             f"Erro ao acionar a rota='{GRAFANA_URL}/api/dashboards/uid/{uid}' http status_code={response.status_code}")
-        raise ConnectionRefusedError
+        raise ConnectionError
 
     return response.json(), title, uid
 
@@ -45,7 +45,7 @@ def backup() -> bool:
         if response.status_code != 200:
             print(
                 f"Erro ao acionar a rota='{GRAFANA_URL}/api/search' http status_code={response.status_code}")
-            raise ConnectionAbortedError
+            raise ConnectionError
 
         dashboards: list[dict] = response.json()
 
